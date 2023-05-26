@@ -1,0 +1,579 @@
+ /* =================
+      #Theme colors
+    ================= */
+
+    :root {
+      --very-light-grey:  hsl(0, 0%, 98%); /* (Light Mode Background) */
+      --light-grey: hsl(0, 0%, 73%);
+      --white: hsl(0, 0%, 100%); /* (Dark Mode Text & Light Mode Elements) */
+      --dark-grey: hsl(0, 1%, 52%); /* (Light Mode Input) */
+      --very-dark-blue: hsl(200, 15%, 8%); /* (Light Mode Text) */
+  
+      --dark-blue: hsl(208, 23%, 22%); /* (Dark Mode Elements) */
+      --very-dark-blue-bg: hsl(207, 26%, 17%); /* (Dark Mode Background) */
+  
+      --font-size-l: 1.5rem;
+      --font-size-xm: 1rem;
+      --font-size-m: 0.875rem;
+      --font-size-s: 0.75rem;
+  }
+  
+   /* =================
+        #Global Style
+      ================= */
+  
+      * {box-sizing: border-box;}
+  
+  body { 
+      margin: 0;
+      font-family: 'Nunito Sans', sans-serif;
+      overflow-x: hidden;
+      background-color: var(--very-light-grey);
+      color: var(--very-dark-blue);
+  }
+
+  body.dark {
+      color: var(--white);
+      background-color: var(--very-dark-blue-bg);
+  }
+
+ 
+  .text-for-dark-mode {
+    color: var(--white);
+}
+  
+  
+   /* =================
+          #Layout
+      ================= */
+  
+  .hero-container {
+      min-height: 6rem;
+      background-color: var(--white);
+      box-shadow: 0 0 5px var(--dark-grey); 
+  }
+
+  .hero-container-dark {
+      background-color: var(--dark-blue);
+  }
+
+      .hero {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 2rem 1.2rem;
+      }
+  
+  
+  .main-content {
+      max-width: 80%;
+      margin: auto;
+      padding: 0;
+     
+  }
+  
+   /* ====================
+      #Detail Page Layout
+      ==================== */
+    
+  .back-btn-container {
+      margin-top: 2.5rem;
+  }
+  
+  .detail-container {
+      font-weight: 600;
+  } 
+  
+  .detail-page-img-position {
+      margin-top: 4rem;
+  }
+  
+  .extra-detail-position {
+      margin: 2rem 0;
+  }
+  
+  .border-countries-position {
+      margin-bottom: 3.75rem;
+  }
+  
+   /* =================
+          #Typography
+      ================= */
+  
+  .hero-text {
+      font-size: var(--font-size-m);
+  }
+  
+      .dark-mode-text {
+          font-size: var(--font-size-s);
+          font-weight: 600;
+      }
+  
+  a,
+  a:hover,
+  a:focus {
+      text-decoration: none;
+      color: var(--very-dark-blue);
+  }
+  
+  span {
+      font-weight: 400;
+  }
+  
+  /* =================
+        #Components
+     ================= */ 
+  
+  .dark-mode-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+  }
+  
+      .theme-switch {
+        width: 1rem;
+        height: 1rem;
+        margin-left: -1rem;
+        margin-right: .5rem;  
+      }
+  
+  
+  .form {
+      display: flex;
+      flex-direction: column;
+      
+  }
+  
+      .search-field,
+      .search-field-dark {
+          width: 100%;
+          height: 3rem;
+          margin-top: 1.5rem;
+          padding: 2rem;
+          border: none;
+          border-radius: .3rem;
+          box-shadow: 1px 1px 5px var(--dark-grey);
+      }
+
+      .search-field-dark {
+        background-color: var(--dark-blue);
+        box-shadow: none;
+        color: var(--white);
+      }
+  
+      .search-field:focus,
+      .search-field-dark {
+          outline: none;
+      }
+
+      
+      ::placeholder {
+          padding-left: .5rem;
+      }
+  
+      ::-moz-placeholder {
+          text-align: left; 
+      }
+  
+      .search-icon-position {
+          position: relative;
+      }
+  
+      .search-icon-position i {
+          position: absolute;
+          left: 1rem;
+          bottom: 1.5rem;
+          color: var(--dark-grey);
+      }
+      
+      .fa-search {
+          font-size: .8rem;
+          margin-right: .5rem;
+      }
+
+      .fa.darkmode {
+          color: var(--white);
+      }
+
+       select,
+       .select-dark {
+        display: block;
+        width: 60%;
+        max-width: 100%;
+        height: 3rem;
+        margin: 2.5rem 0;
+        box-sizing: border-box;
+        text-align: left;
+        padding: 1rem 1rem;
+        border: none;
+        border-radius: .3rem;
+        box-shadow: 1px 1px 5px var(--dark-grey);
+        -moz-appearance: none;
+	    -webkit-appearance: none;
+	    appearance: none;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat, repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%;
+        cursor: pointer;
+        outline: none;
+    }
+
+        select:focus {
+            background-color: var(--white);
+            color: var(--very-dark-blue); 
+            outline: none;
+        }
+
+        .select-dark,
+        .select-dark:focus {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            box-shadow: none;
+        }
+
+  .country-card {
+      margin-bottom: 2rem;
+      border-radius: .3rem;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+      transition: transform .2s;
+   }
+
+    .country-card-dark {
+        margin-bottom: 2rem;
+        border-radius: .3rem;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        transition: transform .2s;
+        box-shadow: none;
+        background-color: var(--dark-blue);
+    }
+
+  
+      .image {
+          display: block;
+          height: 13rem;
+          background-position: 50% 0;
+          background-size: cover;
+          background-attachment: scroll;
+      }
+      
+      .country-card .country-preview img {
+          width: 100%;
+          object-fit: cover;
+      }
+
+      .country-card-dark .country-preview img {
+        width: 100%;
+        object-fit: cover;
+      }
+  
+      .country-info,
+      .country-info-dark {
+          padding: 1.7rem;
+          justify-content: space-between;
+      }
+
+      .country-info-dark {
+          background-color: var(--dark-blue);
+      }
+      
+      .country-title {
+          font-size: var(--font-size-m);
+          display: flex;
+          align-items: center;
+      }
+  
+      .country-info p {
+          font-weight: 600;
+      }
+
+      .load-more-btn,
+      .load-more-btn-dark {
+        width: 6.5rem;
+        height: 2rem;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: .3rem;
+        box-shadow: 1px 1px 5px var(--dark-grey);
+        background-color: var(--white);
+        cursor: pointer;
+      }
+    
+      .load-more-btn-dark {
+        box-shadow: none;
+        color: var(--white);
+        background-color: var(--dark-blue);
+      }
+    
+      .top {
+        transition: all .25s ease-in-out;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        display: inline-flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: .25rem;
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--white);
+      }
+
+      .screen-reader-text {
+        position: absolute;
+        clip-path: inset(50%);
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        word-wrap: normal !important;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+    
+    .screen-reader-text:focus {
+        display: block;
+        top: 5px;
+        left: 5px;
+        z-index: 100000; 
+        clip-path: none;
+        background-color: var(--white);
+        padding: 15px 23px 14px;
+        width: auto;
+        height: auto;
+        text-decoration: none;
+        line-height: normal;
+        color: var(--dark-grey);
+        font-size: 1em;
+        clip: auto !important;
+    }
+    
+
+  /* ========================
+      #Detail page Components
+     ======================== */ 
+  
+  .back-btn,
+  .back-btn-dark {
+      width: 6.5rem;
+      height: 2rem;
+      padding: .3rem 1.5rem;
+      text-align: center;
+      border: none;
+      border-radius: .3rem;
+      box-shadow: 1px 1px 5px var(--dark-grey);
+      background-color: var(--white);
+      cursor: pointer;
+  }
+
+  .back-btn-dark {
+      background-color: var(--dark-blue);
+      box-shadow: none;
+      color: var(--white);
+  }
+  
+      .fa-long-arrow-left {
+          margin-right: .2rem;
+      }
+  
+  
+  .detail-country-img {
+     max-width: 18rem;
+     max-height: 12rem;
+     border-radius: .3rem;
+  }
+  
+  
+  .hide {
+      display: none;
+  }
+
+  .border,
+  .border-dark {
+      margin-bottom: .5rem;
+      margin-right: .6rem;
+      padding: .3rem 1.5rem;
+      border: none;
+      border-radius: .3rem;
+      box-shadow: 1px 1px 5px var(--dark-grey);
+      background-color: var(--white);
+      cursor: pointer;
+      font-size: var(--font-size-s);
+  }
+
+  .border-dark {
+      background-color: var(--dark-blue);
+      color: var(--white);
+      box-shadow: none;
+  }
+
+  .place-load-more-btn {
+      text-align: center;
+  }
+
+  svg {
+    fill: var(--very-dark-blue);
+    width: 20px;
+    height: 10px;
+}
+
+
+ 
+  @media screen and (min-width: 48em) {
+      
+    /* =================
+          #Layout
+       ================= */
+    
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* =================================
+        #Detail Page Layout & Components
+       ================================= */
+
+     .detail-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+     .detail-country-img {
+        grid-column: 1/3;
+        max-width: 20rem;
+        max-height: 14rem;
+        margin-right: 2rem;
+    }
+
+    .detail-info-position {
+        grid-column: 2/3;
+        margin-top: 2rem;
+    }
+
+    .extra-detail-position {
+        grid-column: 3/3;
+    }
+
+    .border-countries-position {
+        grid-column: 2/3;
+    }
+    
+}
+
+@media screen and (min-width: 75em) {
+
+    /* =================
+          #Layout
+       ================= */
+
+    .main-content {
+        max-width: 90%;
+    }
+
+    .hero {
+        padding: 2rem 3.2rem;
+    }
+
+    /* =================
+          #Typography
+       ================= */
+
+    .hero-text {
+        font-size:  var(--font-size-l);
+    }
+
+    .dark-mode-text,
+    .text-for-dark-mode {
+        font-size: var(--font-size-xm);
+        font-weight: 400;
+    }
+
+    /* =================
+          #Components
+       ================= */
+    .form {
+        flex-direction: row;
+        justify-content: space-between;  
+    }
+
+    .search-icon-position i {
+        bottom: 4rem;
+    }
+
+    .search-field,
+    .search-field-dark {
+        width: 30rem;
+        margin-top: 3rem;
+    }
+
+    select,
+    .select-dark {
+        width: 12.5rem;
+        margin-top: 4rem;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .country-card {
+        margin-bottom: 1rem;
+    }
+
+    .load-more-btn,
+    .load-more-btn-dark {
+        width: 8rem;
+        height: 3rem;
+    }
+
+    /* ====================
+        #Detail Page Layout
+       ==================== */
+    .detail-info-position {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .detail-country-img {
+        max-width: 35rem;
+        max-height: 30rem;
+    }
+
+    .extra-detail-position {
+        margin-top: 5rem;
+    }
+
+    .border-countries-position {
+        grid-column: -3/4;
+    }
+
+    .back-btn,
+    .back-btn-dark {
+        width: 8rem;
+        height: 3rem;
+    }
+
+    .border,
+    .border-dark {
+        padding: .7rem 1.9rem;
+    }
+}
+
+@media screen and (min-width: 93.75em) {
+    
+    .hero {
+        padding: 2rem 4.2rem;
+    }
+    .cards-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

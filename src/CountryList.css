@@ -1,0 +1,33 @@
+.country-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    justify-items: center;
+  }
+  
+  .country-card {
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--bg-color-card);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .country-flag {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .country-details {
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .country-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
